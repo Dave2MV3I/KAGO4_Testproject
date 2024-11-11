@@ -67,7 +67,9 @@ public class House extends GraphicalObject {
         drawTool.setCurrentColor(Color.BLACK);
         drawTool.drawRectangle(hX+hW*0.1,hY + 0.6*hH,hW*0.3,0.2*hH); //Fensterumrandung
         drawTool.setCurrentColor(Color.LIGHT_GRAY);
+        drawTool.drawFilledRectangle(hX+hW*0.1 +1,hY + 0.6*hH +1,hW*0.3 -3,0.2*hH -2);
         drawTool.drawRectangle(hX+hW*0.1 +1,hY + 0.6*hH +1,hW*0.3 -2,0.2*hH -2); //Fenster
+        drawTool.setCurrentColor(Color.GRAY);
         drawTool.drawRectangle(hX+hW*0.1 +1,hY + 0.6*hH +1,hW*0.3 -2,0.1*hH -2); //Fensterrahmen
         drawTool.drawRectangle(hX+hW*0.1 +1,hY + 0.6*hH +1,hW*0.15 -2,0.2*hH -2);
 
@@ -75,7 +77,9 @@ public class House extends GraphicalObject {
         drawTool.setCurrentColor(Color.BLACK);
         drawTool.drawRectangle(hX+hW*0.1,hY + 0.2*hH,hW-hW*0.2,0.2*hH); //Fensterumrandung
         drawTool.setCurrentColor(Color.LIGHT_GRAY);
+        drawTool.drawFilledRectangle(hX+hW*0.1 +1,hY + 0.2*hH,hW-hW*0.2 -1,0.2*hH);
         drawTool.drawRectangle(hX+hW*0.1 +1,hY + 0.2*hH,hW-hW*0.2,0.2*hH); //Breites Fenster
+        drawTool.setCurrentColor(Color.GRAY);
         drawTool.drawRectangle(hX+hW*0.1 +1,hY + 0.2*hH,hW-hW*0.2,0.1*hH); //Fensterrahmen
         drawTool.drawRectangle(hX+hW*0.1 +1,hY + 0.2*hH,(hW-hW*0.2)*0.5,0.2*hH);
         drawTool.drawRectangle(hX+hW*0.1 +1,hY + 0.2*hH,(hW-hW*0.2)*0.25,0.2*hH);
