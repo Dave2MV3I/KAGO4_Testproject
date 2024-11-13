@@ -24,7 +24,7 @@ public class ProgramController {
     private House firstHouse, secondHouse; // deklariert eine Referenz für ein Objekt der Klasse House
     private Sun sun;
     private Fence fence;
-    private Tree tree1;
+    private Tree tree1, tree2;
 
     /**
      * Konstruktor
@@ -45,15 +45,18 @@ public class ProgramController {
         // Erstelle ein Objekt der Klasse House und initialisiere damit die Referenz house1
         firstHouse = new House(150,300,200,240);
         secondHouse = new House(360,380,150,160);
-        sun = new Sun(800,100,40);
+        sun = new Sun(820,100,40);
         fence = new Fence(130,550,10,40,45,10);
-        tree1 = new Tree(600,400,100,200,150,300);
+        tree1 = new Tree(600,400,100,200,200,300);
+        tree2 = new Tree(800,450,70,150,150,200);
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
         viewController.draw(firstHouse);
         viewController.draw(secondHouse);
         viewController.draw(sun);
-        viewController.draw(fence);
         viewController.draw(tree1);
+        viewController.draw(tree2);
+        viewController.draw(fence);
+
 
     }
 
