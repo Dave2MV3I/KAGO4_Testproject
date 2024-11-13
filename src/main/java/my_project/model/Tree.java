@@ -6,7 +6,7 @@ import KAGO_framework.view.DrawTool;
 public class Tree extends GraphicalObject {
 
     private double tX, tY, tW, tH, ttW, ttH;
-    public Tree(tX,tY,tW,tH,ttW,ttH){ // Trees X and Y position, width and height, treetops width and height
+    public Tree(double tX, double tY, double tW, double tH, double ttW, double ttH){ // Trees X and Y position, width and height, treetops width and height
         this.tX = tX;
         this.tY = tY;
         this.tW = tW;

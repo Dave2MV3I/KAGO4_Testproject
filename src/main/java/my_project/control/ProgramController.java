@@ -53,7 +53,7 @@ public class ProgramController {
         viewController.draw(secondHouse);
         viewController.draw(sun);
         viewController.draw(fence);
-        viewController.draw(tree);
+        viewController.draw(tree1);
 
     }
 
