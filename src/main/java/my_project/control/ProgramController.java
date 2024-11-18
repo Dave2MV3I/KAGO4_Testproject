@@ -1,10 +1,7 @@
 package my_project.control;
 
 import KAGO_framework.control.ViewController;
-import my_project.model.Fence;
-import my_project.model.House;
-import my_project.model.Sun;
-import my_project.model.Tree;
+import my_project.model.*;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern.
@@ -25,6 +22,8 @@ public class ProgramController {
     private Sun sun;
     private Fence fence;
     private Tree tree1, tree2;
+    private Cloud cloud1, cloud2;
+    private Landscape landscape;
 
     /**
      * Konstruktor
@@ -49,13 +48,19 @@ public class ProgramController {
         fence = new Fence(130,550,10,40,45,10);
         tree1 = new Tree(600,400,100,200,200,300);
         tree2 = new Tree(800,450,70,150,150,200);
+        cloud1 = new Cloud(500,100,5);
+        cloud2 = new Cloud(500,100,5);
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
+        viewController.draw(landscape);
+        viewController.draw(sun);
+        viewController.draw(cloud1);
+        viewController.draw(cloud2);
         viewController.draw(firstHouse);
         viewController.draw(secondHouse);
-        viewController.draw(sun);
         viewController.draw(tree1);
         viewController.draw(tree2);
         viewController.draw(fence);
+
 
 
     }
