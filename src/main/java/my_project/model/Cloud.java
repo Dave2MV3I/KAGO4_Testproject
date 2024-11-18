@@ -20,7 +20,8 @@ public class Cloud extends GraphicalObject {
 
     @Override
     public void draw(DrawTool drawTool) {
-        drawTool.setCurrentColor(216,207,196,255);
+        //drawTool.setCurrentColor(216,207,196,255);
+        drawTool.setCurrentColor(Color.GRAY);
         for (double i = 0; i < cPA; i++){
             drawTool.drawFilledCircle(cX+40*i,cY,40);
             if (i < cPA-1){
