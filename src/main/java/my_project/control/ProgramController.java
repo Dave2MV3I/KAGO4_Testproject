@@ -50,6 +50,7 @@ public class ProgramController {
         tree2 = new Tree(800,450,70,150,150,200);
         cloud1 = new Cloud(500,100,5);
         cloud2 = new Cloud(500,100,5);
+        landscape = new Landscape();
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
         viewController.draw(landscape);
         viewController.draw(sun);
