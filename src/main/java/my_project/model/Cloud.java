@@ -8,14 +8,19 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Cloud extends GraphicalObject {
 
-    private double cX, cY, cPA; // x, y, parts amount
-    public Cloud(double cX, double cY, double cPA){
+    private double cX, cY, cPA, speed; // x, y, parts amount
+    private boolean directionR;
+    public Cloud(double cX, double cY, double cPA, double speed){
         //this.cX = cX;
         //this.cY = cY;
         //this.cPA = cPA;
         this.cX = ThreadLocalRandom.current().nextDouble(0, 1000);
         this.cY = ThreadLocalRandom.current().nextDouble(0, 300);
         this.cPA = ThreadLocalRandom.current().nextDouble(1, 4);
+        this.speed = speed;
+
+        double d = Math.random();
+        if (d < 0.5){directionR = true;} else {directionR = false;}
     }
 
     @Override
@@ -32,6 +37,11 @@ public class Cloud extends GraphicalObject {
 
     @Override
     public void update(double dt){
-
+        if (directionR) {
+            cX += speed*dt;
+            if (cX > 1100) {cX = 0-110*cPA;}
+        } else {cX -= speed*dt;
+            if (cX < 0-110*cPA) {cX = 1100;}
+        }
     }
 }

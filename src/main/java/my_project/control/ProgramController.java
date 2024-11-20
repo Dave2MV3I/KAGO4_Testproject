@@ -47,16 +47,15 @@ public class ProgramController {
         h3 = new House(50, 300, 70, 100);
         h4 = new House(-130, 450, 250, 200);
         h5 = new House(950, 300, 50, 60);
-        sun = new Sun(820,100,40);
+        sun = new Sun(820,400,40);
         fence = new Fence(130,550,10,40,45,10);
         tree1 = new Tree(600,400,100,200,200,300);
         tree2 = new Tree(800,450,70,150,150,200);
-        cloud1 = new Cloud(500,100,5);
-        cloud2 = new Cloud(500,100,5);
+        cloud1 = new Cloud(500,100,5, 50);
+        cloud2 = new Cloud(500,100,5, 100);
         landscape = new Landscape();
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
         viewController.draw(landscape);
-        viewController.draw(sun);
         viewController.draw(cloud1);
         viewController.draw(cloud2);
         viewController.draw(firstHouse);
@@ -67,6 +66,7 @@ public class ProgramController {
         viewController.draw(tree1);
         viewController.draw(tree2);
         viewController.draw(fence);
+        viewController.draw(sun);
 
 
 
