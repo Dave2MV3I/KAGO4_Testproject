@@ -8,6 +8,7 @@ import java.awt.*;
 public class Tree extends GraphicalObject {
 
     private double tX, tY, tW, tH, ttW, ttH;
+    private int r, g, b;
     public Tree(double tX, double tY, double tW, double tH, double ttW, double ttH){ // Trees X and Y position, width and height, treetops width and height
         this.tX = tX;
         this.tY = tY;
@@ -15,6 +16,9 @@ public class Tree extends GraphicalObject {
         this.tH = tH;
         this.ttW = ttW;
         this.ttH = ttH;
+        this.r = 80;  // Standardfarbe für die Baumkrone
+        this.g = 200;
+        this.b = 120;
     }
 
     @Override
@@ -22,7 +26,7 @@ public class Tree extends GraphicalObject {
         double ttX = tX-(ttW-tW)/2;
         drawTool.setCurrentColor(110, 38, 14,255);
         drawTool.drawFilledRectangle(tX,tY,tW,tH);
-        drawTool.setCurrentColor(80, 200, 120,200);
+        drawTool.setCurrentColor(r,g,b,200);
         drawTool.drawFilledRectangle(ttX, tY-ttH, ttW, ttH);
 
         drawTool.setCurrentColor(Color.BLACK);
@@ -34,5 +38,11 @@ public class Tree extends GraphicalObject {
     @Override
     public void update(double dt){
 
+    }
+
+    public void setTreeColour(int r, int g, int b){
+        this.r = r;
+        this.g = g;
+        this.b = b;
     }
 }

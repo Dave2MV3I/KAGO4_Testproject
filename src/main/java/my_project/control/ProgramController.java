@@ -23,7 +23,7 @@ public class ProgramController {
     private Fence fence;
     private Tree tree1, tree2;
     private Cloud cloud1, cloud2;
-    private Landscape landscape;
+    private Landscape landscape1, landscape2;
 
     /**
      * Konstruktor
@@ -46,16 +46,21 @@ public class ProgramController {
         secondHouse = new House(360,380,150,160);
         h3 = new House(50, 300, 70, 100);
         h4 = new House(-130, 450, 250, 200);
-        h5 = new House(950, 300, 50, 60);
-        sun = new Sun(820,400,40);
+        h5 = new House(940, 300, 60, 80);
+        landscape1 = new Landscape(0,0,1000,350,173,216,230);
+        landscape2 = new Landscape(0,350,1000,250,144,238,144);
         fence = new Fence(130,550,10,40,45,10);
         tree1 = new Tree(600,400,100,200,200,300);
         tree2 = new Tree(800,450,70,150,150,200);
         cloud1 = new Cloud(500,100,5, 50);
         cloud2 = new Cloud(500,100,5, 100);
-        landscape = new Landscape();
+        sun = new Sun(820,400,40, landscape1, landscape2, tree1, tree2);
+        // Am Ende initialisieren, damit es die Referenzen auch auf Objekte zeigen können
+
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
-        viewController.draw(landscape);
+        viewController.draw(landscape1);
+        viewController.draw(sun);
+        viewController.draw(landscape2);
         viewController.draw(cloud1);
         viewController.draw(cloud2);
         viewController.draw(firstHouse);
@@ -66,9 +71,6 @@ public class ProgramController {
         viewController.draw(tree1);
         viewController.draw(tree2);
         viewController.draw(fence);
-        viewController.draw(sun);
-
-
 
     }
 
