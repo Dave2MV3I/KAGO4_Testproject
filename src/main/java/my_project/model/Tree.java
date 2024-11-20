@@ -22,7 +22,7 @@ public class Tree extends GraphicalObject {
         double ttX = tX-(ttW-tW)/2;
         drawTool.setCurrentColor(110, 38, 14,255);
         drawTool.drawFilledRectangle(tX,tY,tW,tH);
-        drawTool.setCurrentColor(80, 200, 120,190);
+        drawTool.setCurrentColor(80, 200, 120,200);
         drawTool.drawFilledRectangle(ttX, tY-ttH, ttW, ttH);
 
         drawTool.setCurrentColor(Color.BLACK);

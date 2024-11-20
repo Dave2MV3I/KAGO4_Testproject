@@ -18,7 +18,7 @@ public class ProgramController {
 
     // Referenzen
     private final ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
-    private House firstHouse, secondHouse; // deklariert eine Referenz für ein Objekt der Klasse House
+    private House firstHouse, secondHouse, h3, h4, h5; // deklariert eine Referenz für ein Objekt der Klasse House
     private Sun sun;
     private Fence fence;
     private Tree tree1, tree2;
@@ -44,6 +44,9 @@ public class ProgramController {
         // Erstelle ein Objekt der Klasse House und initialisiere damit die Referenz house1
         firstHouse = new House(150,300,200,240);
         secondHouse = new House(360,380,150,160);
+        h3 = new House(50, 300, 70, 100);
+        h4 = new House(-130, 450, 250, 200);
+        h5 = new House(950, 300, 50, 60);
         sun = new Sun(820,100,40);
         fence = new Fence(130,550,10,40,45,10);
         tree1 = new Tree(600,400,100,200,200,300);
@@ -58,6 +61,9 @@ public class ProgramController {
         viewController.draw(cloud2);
         viewController.draw(firstHouse);
         viewController.draw(secondHouse);
+        viewController.draw(h3);
+        viewController.draw(h4);
+        viewController.draw(h5);
         viewController.draw(tree1);
         viewController.draw(tree2);
         viewController.draw(fence);

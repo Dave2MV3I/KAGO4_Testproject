@@ -14,12 +14,17 @@ public class House extends GraphicalObject {
      * Erzeugt ein neues Objekt der Klasse House
      */
     private double hX,hY,hW,hH;
+    private int r,g,b;
     public House(double hX, double hY, double hW, double hH){
         // Hier passiert momentan nichts - da muss auch anfangs nichts dran geändert werden.
         this.hX = hX;
         this.hY = hY;
         this.hW = hW;
         this.hH = hH;
+        r = (int)(Math.random()*255);
+        g = (int)(Math.random()*255);
+        b = (int)(Math.random()*255);
+
     }
 
 
@@ -53,7 +58,7 @@ public class House extends GraphicalObject {
         drawTool.drawFilledPolygon(hX+hW/2-hW*0.15,hY-hW/2+hW*0.1, hX+hW/2+hW*0.15,hY-hW/2+hW*0.1, hX+hW/2,hY-hW/2-hW*0.1 ); //Dachdeko
         drawTool.setCurrentColor(Color.BLACK);
         drawTool.drawFilledCircle(hX+hW/2,hY,hW/2); //Rundes Dach Umrandung
-        drawTool.setCurrentColor(Color.RED);
+        drawTool.setCurrentColor(r,g,b,255);
         drawTool.drawFilledCircle(hX+hW/2,hY,hW/2 -3); //Rundes Dach
 
         drawTool.setCurrentColor(Color.DARK_GRAY);
