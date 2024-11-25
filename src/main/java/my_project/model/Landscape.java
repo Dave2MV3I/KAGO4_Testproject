@@ -6,6 +6,10 @@ import KAGO_framework.view.DrawTool;
 public class Landscape extends GraphicalObject {
 
     private int w, h, r, g, b;
+
+    // Referenzen
+    private Sun mySun;
+
     public Landscape(int x, int y, int w, int h, int r, int g, int b){
         this.x = x;
         this.y = y;
@@ -35,5 +39,9 @@ public class Landscape extends GraphicalObject {
         this.r = r;
         this.g = g;
         this.b = b;
+    }
+
+    public void setMySun(Sun sun) {
+        mySun = sun;
     }
 }

@@ -55,6 +55,7 @@ public class ProgramController {
         cloud1 = new Cloud(500,100,5, 50);
         cloud2 = new Cloud(500,100,5, 100);
         sun = new Sun(820,400,40, landscape1, landscape2, tree1, tree2);
+        landscape2.setMySun(sun);
         // Am Ende initialisieren, damit es die Referenzen auch auf Objekte zeigen können
 
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
@@ -71,6 +72,7 @@ public class ProgramController {
         viewController.draw(tree1);
         viewController.draw(tree2);
         viewController.draw(fence);
+
 
     }
 
